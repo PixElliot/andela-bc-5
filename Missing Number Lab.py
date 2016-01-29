@@ -8,4 +8,7 @@ def find_missing(l1, l2):
       return 0
     
   # If lists not similar
-  return [i for i in (l1 + l2) if (i not in l1) or (i not in l2)]
+  #return [i for i in (l1 + l2) if (i not in l1) or (i not in l2)]
+
+  for i in list(set(l1) ^ set(l2)):
+  	return i

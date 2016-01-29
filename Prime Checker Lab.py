@@ -16,21 +16,17 @@
 #     return True
 
 class PrimeChecker(object):
-  def __init__(self, number):
+  def __init__(self, number = 0):
     self.number = number
 
   def is_prime(self):
     if self.number == '':
         return False
+    # self.number = int(self.number)
 
-    try:
-      self.number = int(self.number)
-    except:
-      self.number = int(float(self.number))
-
-    if self.number >= 2:
-        for i in range(2, self.number):
-            if not (self.number % i):
+    if int(self.number) >= 2:
+        for i in range(2, int(self.number)):
+            if not (int(self.number) % i):
                 return False
     else:
       return False
